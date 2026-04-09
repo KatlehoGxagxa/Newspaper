@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #local apps
     'accounts.apps.AccountsConfig',     # new
     'pages.apps.PagesConfig',   # new
+    'articles.apps.ArticlesConfig',
     #3rd party apps
     "crispy_forms",
     "crispy_bootstrap5",
@@ -110,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Johannesburg'
 
 USE_I18N = True
 
@@ -130,3 +131,5 @@ LOGOUT_REDIRECT_URL = "home"    # new
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"    # new
 CRISPY_TEMPLATE_PACK = "bootstrap5"     # new
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"       # new
